@@ -23,54 +23,11 @@ public class main {
                 } else {
                     System.out.println("Error transaction");
                 }
-                switch (choice) {
-                    case 1:
-                        System.out.println("Do you want to continue\nType 1 for yes or 0 for No");
-                        yes = s.nextInt();
-                        if (yes == 1) {
-                            System.out.println("\n 1.Withdraw\n 2.Deposit\n 3.Balance\n 4.Exit\n");
-                            choice = s.nextInt();
-                            switch (choice) {
-                                case 1:
-                                    System.out.println("How much money you will take");
-                                    withdraw = s.nextInt();
-                                    if (balance >= withdraw) {
-                                        balance = balance - withdraw;
-                                        System.out.println("Take your money");
-                                    } else {
-                                        System.out.println("Error transaction");
-                                    }
-                                    break;
-                                case 2:
-                                    System.out.println("How much money you want to deposit");
-                                    deposit = s.nextInt();
-                                    if ((balance >= deposit) || (balance <= deposit)) {
-                                        balance = balance + deposit;
-                                        System.out.println("Succefully transaction");
-
-                                    } else {
-                                        System.out.println("Error transaction");
-                                    }
-                                    break;
-                                case 3:
-                                    System.out.println("Your total balance: " + balance);
-                                    break;
-                                case 4:
-                                    System.out.println("Exit");
-                                    break;
-                                default:
-                                    System.out.println("Wrong Choice, Please select of the options to continue");
-                            }
-                        } else {
-                            break;
-                        }
-
-
-                        break;
+                while (true) {
+                    System.out.println("Take your card");
+                    break;
                 }
-                break;
         }
-
         switch (choice) {
             case 2:
                 System.out.println("How much money you want to deposit");
@@ -78,23 +35,24 @@ public class main {
                 if ((balance >= deposit) || (balance <= deposit)) {
                     balance = balance + deposit;
                     System.out.println("Successfully transaction");
-
+                    System.out.println("You deposit: "+deposit);
                 } else {
                     System.out.println("Error transaction");
                 }
                 while (true) {
-                    System.out.println("WAnt to continue?\n Yes =1, No =0");
+                    System.out.println(" Do you want to continue? Type\n Yes =1, No =0");
                     yes = s.nextInt();
                     if (yes == 1) {
                         System.out.println("\n 1.Withdraw\n 2.Deposit\n 3.Balance\n 4.Exit");
                         choice = s.nextInt();
                         switch (choice) {
                             case 1:
-                                System.out.println("How much money you will take");
+                                System.out.println("How much money you withdraw?");
                                 withdraw = s.nextInt();
                                 if (balance >= withdraw) {
                                     balance = balance - withdraw;
                                     System.out.println("Take your money");
+                                    System.out.println("You withdraw: "+withdraw);
                                 } else {
                                     System.out.println("Error transaction");
                                 }
@@ -105,14 +63,16 @@ public class main {
                                 if ((balance >= deposit) || (balance <= deposit)) {
                                     balance = balance + deposit;
                                     System.out.println("Succefully transaction");
+                                    System.out.println("You deposit: "+deposit);
 
                                 } else {
                                     System.out.println("Error transaction");
                                 }
+
                                 break;
                             case 3:
                                 System.out.println("Your total balance: " + balance);
-                                break;
+                                System.out.println("Take your card");
                             case 4:
                                 System.out.println("Exit");
                                 break;
@@ -122,10 +82,10 @@ public class main {
 
                         }
                     } else {
+                        System.out.println("Take your card");
                         break;
                     }
                     break;
-
                 }
                 break;
         }
@@ -146,6 +106,7 @@ public class main {
                                 if (balance >= withdraw) {
                                     balance = balance - withdraw;
                                     System.out.println("Take your money");
+                                    System.out.println("Your balance now is: "+balance);
                                 } else {
                                     System.out.println("Error transaction");
                                 }
@@ -156,7 +117,8 @@ public class main {
                                 if ((balance >= deposit) || (balance <= deposit)) {
                                     balance = balance + deposit;
                                     System.out.println("Succefully transaction");
-
+                                    System.out.println("You deposit: "+deposit);
+                                    System.out.println("Your balance now is: "+balance);
                                 } else {
                                     System.out.println("Error transaction");
                                 }
@@ -173,6 +135,7 @@ public class main {
                         }
 
                     } else {
+                        System.out.println("Take your card");
 
                         break;
                     }
@@ -186,8 +149,7 @@ public class main {
         switch (choice) {
             case 4:
                 System.out.println("Enter " + 0 + " to Exit");
-
-
+                System.out.println("Take your card");
                 break;
         }
 
