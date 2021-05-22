@@ -149,7 +149,8 @@ public class main {
         switch (choice) {
             case 4:
                 System.out.println("Enter " + 0 + " to Exit");
-                System.out.println("Take your card");
+                System.out.println("Take your card\n\n\n");
+                System.out.println("Have a nice day");
                 break;
         }
 
